@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sorting Visualizer</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2 class="path">WELCOME TO</h2>
+        <h2 class="name">SORTING VISUALIZER</h2>
+
+    </header>
+    <section class="main">
+
+        <nav>
+            <ul class="menu">
+                <li class="clearfix">
+                    <ul class="main-menu">
+                        <li class="link"><a href="info.html">info</a></li>
+                        <li class="link current"><a href="SortingAlgorithms.html">Sorting Algorithms</a></li>
+                        <li class="link"><a href="SortingVisualizer.html">Sorting Visualizer</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <section class="subsection">
+            <section id="sub" class="subsection">
+                <h1 style="color :blue">Bubble Sort</h1>
+                <p>Bubble sort is a sorting algorithm that compares two adjacent elements and swaps them if they are not in the intended order. </p>
+                <h2 style="color :blue">Bubble Sort Algorithm</h2>
+                <p>
+                    <dl>
+                        <dt style="font-size: 20px; color:blue">Algorithm</dt>
+                        <dd>- Bubble Sort</dd>
+                        <dt style="font-size: 20px; color:blue">Input</dt>
+                        <dd>- An array A[0, 1,2, …, n] , where n is the number of elements</dd>
+                        <dt style="font-size: 20px; color:blue">Output</dt>
+                        <dd>- An array A with all elements in sorted order</dd>
+                      </dl>
+                     Steps:<br>
+                     <ul>
+                    <li>Start</li>
+                    <li>for i=0 to n-1 do
+                    <ul>
+                    <li>for j=0 to n-i-1 do
+                    <ul>
+                    <li>if ( A[j] >A[j+1] ) then
+                    <ul>
+                    <li>swap(A[j], A[j+1])</li>
+                    </ul>
+                    <li>endif</li>
+                    </ul>
+                    <li>endfor</li>
+                    </ul>
+                    <li>endfor</li>
+                    <li>Stop</li>
+                    </ul>
+                </p>
+                <h2 style="color :blue">Working of Bubble Sort</h2>
+                <ul>
+                    <h3>First Iteration (Compare and Swap)</h3>
+                    <li> Starting from the first index, compare the first and the second elements.</li>
+                    <li> If the first element is greater than the second element, they are swapped.</li>
+                    <li> Now, compare the second and the third elements. Swap them if they are not in order.</li>
+                    <li> The above process goes on until the last element.</li>
+                    <h3> Remaining Iteration</h3>
+                    <li>The same process goes on for the remaining iterations.<br> After each iteration, the largest element among the unsorted elements is placed at the end.<br>
+                    </li>
+                    <li>In each iteration, the comparison takes place up to the last unsorted element.<br>
+                    </li>
+                    <li>The array is sorted when all the unsorted elements are placed at their correct positions.<br>
+                    </li>
+                </ul>
+                <h2 style="color :blue">Time Complexity</h2>
+                <p>Time complexity is the amount of time taken by an algorithm to run, as a function of the length of the input. <br>It measures the time taken to execute each statement of code in an algorithm.</p>
+                <ul>
+                    <li> Best case time complexity : O(n)</li>
+                    <li> Average case time complexity :O(n<sup>2</sup>)</li>
+                    <li> Worst case time complexity : O(n<sup>2</sup>)</li>
+                </ul>
+                <p>Here n is number of elements being sorted.</p>
+                <h2 style="color :blue">Example</h2>
+                <div>
+                    <img src="img/bubble_sort.png" class="center">
+                </div>
+                </ul>
+
+
+
+
+            </section>
+        </section>
+        <section class="subsection">
+            <section id="sub" class="subsection">
+                <h1 style="color : brown">Insertion Sort</h1>
+                <li>Insertion sort is a sorting algorithm that places an unsorted element at its suitable place in each iteration.</li>
+                <li>Insertion sort works similarly as we sort cards in our hand in a card game.</li>
+                <li>We assume that the first card is already sorted then, we select an unsorted card. </li>
+                <li>If the unsorted card is greater than the card in hand, it is placed on the right otherwise, to the left.</li>
+                <li>In the same way, other unsorted cards are taken and put in their right place.</li>
+                <li>A similar approach is used by insertion sort.</li>
+                <h2 style="color:brown;">Insertion Sort Algorithm</h2>
+                <dl>
+                        <dt style="font-size: 20px; color:brown">Algorithm</dt>
+                        <dd>- Insertion Sort</dd>
+                        <dt style="font-size: 20px; color:brown">Input</dt>
+                        <dd>- An array A[0,1, 2, …, n] , where n is the number of elements</dd>
+                        <dt style="font-size: 20px; color:brown">Output</dt>
+                        <dd>- An array A with all elements in sorted order</dd>
+                      </dl>
+                     Steps:<br>
+                     <ul>
+                    <li>Start</li>
+                    <li>for i=1 to n do
+                    <ul>
+                    <li>temp = A[i]</li>
+                    <li>j = i-1 </li>
+                    <li>while (j >= 0) and (A[j] > temp) do
+                    <ul>
+                    <li>A[j+1] = A[j]</li>
+                    <li> j = j - 1</li>
+                    </ul>
+                    <li>endwhile</li>
+                    <li>A[j+1] = temp</li>
+                    </ul>
+                    <li>endfor</li>
+                    <li>Stop</li>
+                    </ul>
+                <h2 style="color:brown;">Working of Insertion Sort</h2>
+                <ul>
+                    <li>Suppose we need to sort the following array.</li>
+                    <li>The first element in the array is assumed to be sorted. Take the second element and store it separately in key.<br> Compare key with the first element. If the first element is greater than key, then key is placed in front of the first
+                        element. <br>
+                    </li>
+                    <li>Now, the first two elements are sorted.<br>Take the third element and compare it with the elements on the left of it. Placed it just behind the element smaller than it. <br> If there is no element smaller than it, then place it at
+                        the beginning of the array.<br>
+                    </li>
+                    <li>Similarly, place every unsorted element at its correct position.</li>
+                </ul>
+                <h2 style="color:brown;">Time Complexity</h2>
+                <p>Time complexity is the amount of time taken by an algorithm to run, as a function of the length of the input. <br>It measures the time taken to execute each statement of code in an algorithm.</p>
+                 <ul>
+                    <li>Best case time complexity: O(n).</li>
+                    <li>Average case time complexity : O(n<sup>2</sup>)</li>
+                    <li>Worst case time complexity : O(n<sup>2</sup>)</li>
+                </ul>
+                <p>Here n is number of elements being sorted.</p>
+                <h2>Example</h2>
+                <div>
+                    <img src="img/insertion_sort.png" class="center">
+                </div>
+                </ul>
+            </section>
+        </section>
+        <section class="subsection">
+            <section id="sub" class="subsection">
+                <h1 style="color : purple;">Selection Sort</h1>
+                <p>Selection sort is a sorting algorithm that selects the smallest element from an unsorted list in each iteration and places that element at the beginning of the unsorted list. </p>
+                <h2 style="color:purple;">Selection Sort Algorithm</h2>
+                <dl>
+                    <dt style="font-size: 20px; color:purple">Algorithm</dt>
+                    <dd>- Selection Sort</dd>
+                    <dt style="font-size: 20px; color:purple">Input</dt>
+                    <dd>- An array A[0,1,2, …, n] , where n is the number of elements</dd>
+                    <dt style="font-size: 20px; color:purple">Output</dt>
+                    <dd>- An array A with all elements in sorted order</dd>
+                  </dl>
+                 Steps:<br>
+                 <ul>
+                <li>Start</li>
+                <li>for i=0 to n-1 do<ul>
+                <li> j=SelectMin(i, n)</li>
+                <li> if (i ≠ j) then <ul>
+                <li> swap(A[i], A[j])</li></ul>
+                <li> endif</li></ul>
+                <li>endFor</li>
+                <li>Stop</li>
+                </ul>
+                <h2 style="color:purple">
+                    Working of Selection sort
+                </h2>
+                <ul>
+                    <li>Set the first element as minimum</li>
+                    <li>Compare minimum with the second element. If the second element is smaller than minimum, assign the second element as minimum..</li>
+                    <li>Compare minimum with the third element. Again, if the third element is smaller, then assign minimum to the third element otherwise do nothing.</li>
+                    <li>The above process goes on until the last element.</li>
+                    <li>After each iteration, minimum is placed in the front of the unsorted list</li>
+                    <li>For each iteration, indexing starts from the first unsorted element. Step 1 to 3 are repeated until all the elements are placed at their correct positions.</li>
+                </ul>
+                <h2 style="color:purple">Time Complexity</h2>
+                <p>Time complexity is the amount of time taken by an algorithm to run, as a function of the length of the input. <br>It measures the time taken to execute each statement of code in an algorithm.</p>
+                <ul>
+                    <li>Best case time complexity : O(n<sup>2</sup>)</li>
+                    <li>Average case time complexity : O(n<sup>2</sup>)</li>
+                    <li>Worst case time complexity : O(n<sup>2</sup>)</li>
+                </ul>
+                <p>Here n is number of elements being sorted.</p>
+                <h2>Example</h2>
+                <div>
+                    <img src="img/Selection_sort.jpg" class="center">
+                </div>
+                </ul>
+            </section>
+        </section>
+        <section class="subsection">
+            <section id="sub" class="subsection">
+                <h1 style="color:green">Quick Sort</h1>
+                <p>Quick Sort algorithm follows Divide and Conquer approach. It divides elements into smaller parts based on some condition and performing the sort operations on those divided smaller parts.</p>
+                <h2 style="color: green">Quick Sort Algorithm</h2>
+                <dl>
+                    <dt style="font-size: 20px; color:green">Algorithm</dt>
+                    <dd>- Quicksort(A, lb, ub)</dd>
+                    <dt style="font-size: 20px; color:green">Input</dt>
+                    <dd>- An array A[lb…..ub] where lb and ub are the lower and upper indexes of Array</dd>
+                    <dt style="font-size: 20px; color:green">Output</dt>
+                    <dd>-  Array A[lb…ub] with all elements arranged in ascending order. </dd>
+                  </dl>
+                 Steps:<br>
+                 <ul>
+                <li>Start</li>
+                <li>if (lb < ub)<ul>
+                <li>Loc = Partition (A,lb,ub)</li>
+                <li>call Quicksort (A, lb…, loc-1) </li>
+                <li>call Quicksort (A, loc+1, ub)</li></ul>
+                <li>endif</li>
+                <li>Stop</li>
+                </ul>
+                <h2 style="color:green;">Working of Quick sort algorithm</h2>
+                <ul>
+                    <li>First find the "pivot" element in the array.</li>
+                    <li>Start the left pointer at first element of the array.</li>
+                    <li>Start the right pointer at last element of the array.</li>
+                    <li>Compare the element pointing with left pointer and if it is less than the pivot element, then move the left pointer to the right (add 1 to the left index). Continue this until left side element is greater than or equal to the pivot
+                        element.
+                    </li>
+                    <li>Compare the element pointing with right pointer and if it is greater than the pivot element, then move the right pointer to the left (subtract 1 to the right index). Continue this until right side element is less than or equal to the
+                        pivot element.</li>
+                    <li>Check if left pointer is less than or equal to right pointer, then saw the elements in locations of these pointers.</li>
+                    <li>Increment the left pointer and decrement the right pointer.</li>
+                    <li>If index of left pointer is still less than the index of the right pointer, then repeat the process; else return the index of the left pointer</li>
+                </ul>
+                <h2 style="color: green;">Time Complexity</h2>
+                <p>Time complexity is the amount of time taken by an algorithm to run, as a function of the length of the input. <br>It measures the time taken to execute each statement of code in an algorithm.</p>
+                <ul>
+                    <li>Best case time complexity : O(nlogn)</li>
+                    <li>Average case time complexity : O(nlogn)</li>
+                    <li>Worst case time complexity : O(n<sup>2</sup>)</li>
+                </ul>
+                <p>Here n is number of elements being sorted.</p>
+                <h2>Example</h2>
+                <div>
+                    <img src="img/quick_1.png" class="center">
+                </div>
+                <div>
+                    <img src="img/quick_2.png" class="center">
+                </div>
+                <div>
+                    <img src="img/quick_3.png" class="center">
+                </div>
+                </ul>
+            </section>
+        </section>
+        <section class="subsection">
+            <section id="sub" class="subsection">
+                <h1 style="color :crimson;">Merge Sort</h1>
+                <p>
+                    Merge Sort is one of the most popular sorting algorithms that is based on the principle of Divide and Conquer Algorithm.<br> Here, a problem is divided into multiple sub-problems. Each sub-problem is solved individually.<br> Finally,
+                    sub-problems are combined to form the final solution.<br>
+                </p>
+                <h2 style="color : crimson">Merge Sort Algorithm</h2>
+                <dl>
+                    <dt style="font-size: 20px; color:crimson">Algorithm</dt>
+                    <dd>- MergeSort(A,lb,ub)</dd>
+                    <dt style="font-size: 20px; color:crimson">Input</dt>
+                    <dd>- An array A[lb…..ub] where lb and ub are the lower and upper indexes of Array</dd>
+                    <dt style="font-size: 20px; color:crimson">Output</dt>
+                    <dd>- Array A[lb…ub] with all elements arranged in ascending order.
+                    </dd>
+                  </dl>
+                 Steps:<br>
+                 <ul>
+                <li>Start</li>
+                <li>if (ub ≤ lb) then<ul>
+                <li>return </li></ul>
+                <li>else <ul>
+                <li>Mid = (lb+ub)/2 </li>
+                <li>Mergesort (A, lb, mid)</li>
+                <li>Mergesort (A, mid+1, ub)</li>
+                <li>Merge(A, lb, mid, ub)</li></ul>
+                <li>endif</li>
+                <li>Stop</li>
+                </ul>
+                <h2 style="color :crimson;">Working of Merge Sort</h2>
+                <ul>
+                    <li>Every recursive algorithm is dependent on a base case and the ability to combine the results from base cases. Merge sort is no different</li>
+                    <li>The most important part of the merge sort algorithm is, you guessed it, merge step.</li>
+                    <li>The merge step is the solution to the simple problem of merging two sorted lists(arrays) to build one large sorted list(array).</li>
+                    <li>The algorithm maintains three pointers, one for each of the two arrays and one for maintaining the current index of the final sorted array.</li>
+                    <li>Have we reached the end of any of the arrays?<br> No: <br> Compare current elements of both arrays <br> Copy smaller element into sorted array <br> Move pointer of element containing smaller element <br> Yes: <br> Copy all remaining
+                        elements of non-empty array <br></li>
+                </ul>
+                <h2 style="color:crimson;">Time Complexity</h2>
+                <p>Time complexity is the amount of time taken by an algorithm to run, as a function of the length of the input. <br>It measures the time taken to execute each statement of code in an algorithm.</p>
+                <ul>
+                    <li>Best case time complexity : O(nlogn)</li>
+                    <li>Average case time complexity : O(nlogn)</li>
+                    <li>Worst case time complexity : O(nlogn)</li>
+                </ul>
+                <p>Here n is number of elements being sorted.</p>
+                <h2>Example</h2>
+                <div>
+                    <img src="img/merge_1.PNG" width="698" height="390" class="center">
+                </div>
+                <div>
+                    <img src="img/merge 2.PNG" width="698" height="390" class="center">
+                </div>
+                </ul>
+            </section>
+</body>
+
+</html>
