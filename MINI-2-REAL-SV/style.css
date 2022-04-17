@@ -1,0 +1,312 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, arial, sans-serif;
+  background-color: #222;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-style:italic;
+}
+
+/* HEADER AREA STYLES */
+
+header {
+  background-image: url("img/background.png");
+  background-position: center;
+  background-size:cover;
+  height: 250px;
+  position: relative;
+  padding-top: 5px;
+  color:white;
+}
+
+.path {
+  font-size: 15px;
+  text-align: center;
+  clear: both;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.name {
+  margin-top: 0;
+  font-size: 5px;
+  color: #ccc;
+  font-style:inherit;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+
+  .path {
+    font-size: 20px;
+  }
+
+  .name {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .path {
+    font-size: 40px;
+  }
+
+  .name {
+    font-size: 40px;
+  }
+
+}
+
+nav {
+  position: relative;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul::after {
+  content: "";
+  display:block;
+  clear: both;
+}
+
+.menu {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  margin: 0;
+  font-size: 12px;
+}
+
+.menu > li {
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.35s ease-in-out 0s;
+  text-shadow: none;
+}
+
+.main-menu-toggle:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+.main-menu {
+  height: 0;
+  overflow: hidden;
+}
+
+
+@media (min-width: 650px) {
+
+  .main-menu {
+    height: auto;
+    overflow: visible;
+  }
+
+  .menu > li > * {
+    float: left;
+  }
+
+  .main-menu > li {
+    float: left;
+    border-left: 2px solid transparent;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .menu {
+    font-size: 18px;
+  }
+}
+
+.menu a {
+  font-style: normal;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+nav li a,
+.menu > li:first-child label {
+  display: block;
+  padding: 5px 8px;
+}
+
+@media (min-width: 1024px) {
+
+  nav li a,
+  .menu > li:first-child label {
+    padding: 5px 20px;
+  }
+}
+
+nav .link:hover,
+nav .menu .current {
+  background-color: rgba(255, 165, 0, 0.8);
+  color: #000;
+  border-color: #000;
+}
+
+nav li.current a:hover {
+  cursor: default;
+}
+
+/* MAIN CONTENT STYLES */
+
+.main {
+  position: relative;
+  color: #222;
+  text-shadow: 0px 0px 1px #fff;
+}
+
+.main h1 {
+  font-size: 20px;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.main h2 {
+  font-size: 18px;
+  margin-bottom: 30px;   
+}
+
+@media (min-width: 600px) {
+
+  .main h1 {
+    font-size: 30px;
+  }
+
+  .main h2 {
+    font-size: 22px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .main h1 {
+    font-size: 40px;
+    padding: 30px;
+  }
+
+}
+
+.main > section {
+  background-color: #ddd;
+  padding: 20px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 600px) {
+
+  .main > section {
+    margin-top: 20px;
+    max-width: 900px;
+    width: 80%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.main a {
+  color: inherit;
+}
+
+
+.subsection section {
+  border-top: 5px solid #ccc;
+}
+
+
+
+.subsection section::after {
+  content: '';
+  /*display: block;*/
+  clear: both;
+}
+
+
+section #array_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.algos button {
+  background-color:transparent;
+  border:0ch;
+  color: black;
+  outline: none;
+  padding: 3% 3%;
+  font-size: x-large;
+}
+
+.algos button:hover {
+  background-color:darkgray;
+  cursor: pointer;
+}
+   
+  .array-inputs { 
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+  place-content: center;
+  padding: 5% 0%;
+}
+
+.array-inputs #a_size {
+  padding: 4% 0% 0% 0%;
+  background-color:white;
+  color : black;
+
+}
+.array-inputs #a_speed {
+  padding: 5% 0%;
+}
+
+.array-inputs #a_elements {
+  padding: 4% 0% 0% 0%;
+  background-color:white;
+  color : black;
+}
+#a_generate {
+  margin :0 auto;
+  padding: 2% 2% 2% 2%;
+  text-align: center;
+  width :20%;
+  margin-left:100%;
+  margin-right:0%;
+  background-color:darkgrey;
+  color :black;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
